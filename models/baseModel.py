@@ -1,4 +1,5 @@
-import requests, config
+import requests
+from config import config
 
 
 class BaseModel:

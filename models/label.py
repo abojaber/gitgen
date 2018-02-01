@@ -1,5 +1,6 @@
 from models.baseModel import BaseModel
-import requests, config
+import requests
+from config import config
 
 
 class Label(BaseModel):

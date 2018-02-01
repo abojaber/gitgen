@@ -5,7 +5,7 @@ from templates import simple
 import sys
 
 
-project_id = 259
+project_id = sys.argv[1]
 
 lbl_result = {}
 mls_result = {}
