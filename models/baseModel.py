@@ -14,7 +14,14 @@ class BaseModel:
                                 headers=config.headers)
         return request.json()
 
+    def getAll(self):
+        request = requests.get(self.url,
+                               headers=config.headers)
+        
+        return request.json()
+
     def delete(self, obj):
+        print(self.url + '/{}'.format(obj))
         request = requests.delete(self.url + '/{}'.format(obj),
                                   # data=obj,
                                   headers=config.headers)

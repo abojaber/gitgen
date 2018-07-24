@@ -10,8 +10,8 @@ class Label(BaseModel):
         BaseModel.__init__(self, project, self.type)
 
     def delete(self, obj):
-        request = requests.delete(self.url,
+        request = requests.delete(self.url + '?name={}'.format(obj),
                                   data=obj,
                                   headers=config.headers)
-        print(self.url)
+
         return request.status_code
